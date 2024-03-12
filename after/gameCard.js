@@ -8,17 +8,12 @@ export class GameCard extends HTMLElement {
     this.classList.add("card");
     this.dataset.name = this.getAttribute("name");
 
-    const frontImage = document.createElement("img");
-    frontImage.classList.add("card-front");
-    frontImage.src = this.getAttribute("imagePath");
-    frontImage.alt = "카드 앞면";
+    const imagePath = this.getAttribute("imagePath");
 
-    const backImage = document.createElement("img");
-    backImage.classList.add("card-back");
-    backImage.src = "../img/question.svg";
-    backImage.alt = "카드 뒷면";
-
-    this.append(frontImage, backImage);
+    this.innerHTML = `
+        <img class="card-front" src="${imagePath}" alt="카드 앞면" />
+        <img class="card-back" src="../img/question.svg" alt="카드 뒷면" />
+    `;
   }
 
   // NOTE: 내부 상태를 보여주는 getter 함수

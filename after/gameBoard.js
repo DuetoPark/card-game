@@ -14,7 +14,7 @@ export class GameBoard extends HTMLElement {
 
   async connectedCallback() {
     // call card data
-    const cardInfoList = await this.#fetchCardInfoList(this.#level.easy);
+    const cardInfoList = await this.#fetchCardInfoList(this.#level.medium);
 
     // create cards
     this.classList.add("board");
