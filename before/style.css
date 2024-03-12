@@ -31,7 +31,7 @@ body {
   transform-style: preserve-3d;
 }
 
-.card:active {
+.card.flip {
   transform: rotateY(180deg);
 }
 
@@ -45,6 +45,7 @@ body {
   border-radius: 8px;
   backface-visibility: hidden;
   background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
 }
 
 .card-front {
