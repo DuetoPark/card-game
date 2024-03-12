@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: cornflowerblue;
+}
+
+/* Board */
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 16px;
+  perspective: 1200px;
+}
+/* End of Board */
+
+/* Card */
+.card {
+  position: relative;
+  width: 200px;
+  aspect-ratio: 3 / 4;
+  transition: transform 400ms ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+/* End of Card */
