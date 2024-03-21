@@ -1,4 +1,4 @@
-import { CustomElemName } from "./constant.js";
+import { CustomElemName } from "../constant.js";
 import { suffleOrderArray } from "./utils.js";
 
 export class GameBoard extends HTMLElement {
@@ -104,7 +104,7 @@ export class GameBoard extends HTMLElement {
   }
 
   async #fetchCardInfoList(count) {
-    return await fetch("./cardData.json")
+    return await fetch("./datas/cardData.json")
       .then((response) => response.json())
       .then((data) => data.slice(0, count));
   }

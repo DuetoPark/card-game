@@ -1,4 +1,4 @@
-import { CustomElemName } from "./constant.js";
+import { CustomElemName } from "../constant.js";
 
 export class GameCard extends HTMLElement {
   // NOTE: 내부 상태, 내부에서만 관리한다

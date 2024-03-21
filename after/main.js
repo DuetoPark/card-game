@@ -1,2 +1,2 @@
-import "./gameBoard.js";
-import "./gameCard.js";
+import "./js/gameBoard.js";
+import "./js/gameCard.js";
